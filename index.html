@@ -1,1 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ｈｅｒｏ ｘ Ｂｈａｉ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
+    html, body {
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      background: url('https://i.postimg.cc/RVLH74Z4/IMG-20250802-WA0175.jpg') no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: blur(3px);
+    }
+
+    .login-container {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 40px 30px;
+      border-radius: 20px;
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+      color: #fff;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .login-container h2 {
+      margin-bottom: 25px;
+      font-size: 30px;
+      letter-spacing: 1.5px;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    input {
+      width: 100%;
+      padding: 14px;
+      margin: 12px 0;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      background-color: rgba(255,255,255,0.15);
+      color: #fff;
+      outline: none;
+    }
+
+    input::placeholder {
+      color: #ddd;
+    }
+
+    button {
+      width: 100%;
+      padding: 15px;
+      border: none;
+      border-radius: 12px;
+      background: linear-gradient(to right, #ff6a00, #ee0979);
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 12px #ee0979aa;
+    }
+
+    .error {
+      color: #ff4d4d;
+      margin-top: 12px;
+      font-size: 14px;
+    }
+
+    .credentials {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #e0e0e0;
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <h2>Ｈｅｒｏ ｘ Ｂｈａｉ</h2>
+    <input type="text" id="username" placeholder="Enter Username" />
+    <input type="password" id="password" placeholder="Enter Password" />
+    <button onclick="login()">Login</button>
+    <div class="error" id="errorMsg"></div>
+    <div class="credentials">
+      Username: <strong>Kashif</strong><br>
+      Password: <strong>Zainab001</strong>
+    </div>
+  </div>
+
+  <script>
+    function login() {
+      const user = document.getElementById('username').value;
+      const pass = document.getElementById('password').value;
+      const errorMsg = document.getElementById('errorMsg');
+
+      if (user === "Baloch" && pass === "1122@908") {
+        window.location.href = "encrypted.html";
+      } else {
+        errorMsg.textContent = "❌ Invalid Username or Password!";
+      }
+    }
+  </script>
+
+</body>
+</html>
